@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Igor_Machado_Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">IGM.</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="../index.html"  style="--navAni:1">Home</a></li>
+                <li><a href="#" class="active" style="--navAni:2">About</a></li>
+                <li><a href="skills.html" style="--navAni:3">Skills</a></li>
+                <li><a href="projects.html" style="--navAni:4">Projects</a></li>
+                <li><a href="contact.html" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkbtn">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="social">
+            </div>
+            <div class="detail">
+                <h1><span>Igor Machado, 21</span></h1>
+                <h3>Computer engineering student.</h3>
+                <p>When I was 12 years old I started to enter the world of computing,
+                    my first interactions with this world were programs like the typical "Hello World"
+                    and a calculator for mobile.
+                </p>
+                <p>
+                    From then on, I began seeking more knowledge in the area of one of my greatest interests,
+                    game development.
+                </p>
+                <p>
+                    I currently work with quality engineering as a quality technician, 
+                    improving my knowledge and cooperating with my work with the world of technology.
+                </p>
+                <div class="btn">
+                    <button>Download CV</button>
+                </div>
+
+            </div>
+            <div class="img-sec">
+                <div class="circle-container">
+                    <img src="me6.jfif" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const darkbtn = document.getElementById('darkbtn');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkbtn.checked = true;
+        }
+
+        darkbtn.addEventListener('change', () => {
+            if (darkbtn.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>

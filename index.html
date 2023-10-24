@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/intro.css">
+    <title>Igor_Machado_Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">IGM.</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#" class="active" style="--navAni:1">Home</a></li>
+                <li><a href="./assets/about.html" style="--navAni:2">About</a></li>
+                <li><a href="./assets/skills.html" style="--navAni:3">Skills</a></li>
+                <li><a href="./assets/projects.html" style="--navAni:4">Projects</a></li>
+                <li><a href="./assets/contact.html" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkbtn">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="social">
+                <a href="https://br.linkedin.com/in/igor-machado-745084205" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://instagram.com/igor_gabriel_machado?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/igor.g.machado?mibextid=LQQJ4d" style="--socialAni:4"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://br.linkedin.com/in/igor-machado-745084205" style="--socialAni:5"><i class='bx bxl-github'></i></a>
+            </div>
+            <div class="detail">
+                <h1>Hi, I'm <span>Igor</span></h1>
+                <h3>Computer engineering student.</h3>
+                <p>I am a computer engineering student in development.
+                    My goal is to become a complete professional in the IT field.
+                    Focused on backend and very curious about game development.
+                </p>
+
+            </div>
+            <div class="img-sec">
+                <div class="circle-container">
+                    <img src="./assets/me6.jfif" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const darkbtn = document.getElementById('darkbtn');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkbtn.checked = true;
+        }
+
+        darkbtn.addEventListener('change', () => {
+            if (darkbtn.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>

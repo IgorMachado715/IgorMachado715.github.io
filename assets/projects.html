@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Igor_Machado_Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">IGM.</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="../index.html" style="--navAni:1">Home</a></li>
+                <li><a href="about.html" style="--navAni:2">About</a></li>
+                <li><a href="skills.html" style="--navAni:3">Skills</a></li>
+                <li><a href="#" class="active" style="--navAni:4">Projects</a></li>
+                <li><a href="contact.html" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkbtn">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="main">
+            <div class="social">
+                <a href="https://br.linkedin.com/in/igor-machado-745084205" style="--socialAni:1"><i class='bx bxl-github'></i></a>
+            </div>
+            <div class="detail">
+                <h1><span>Projects</span></h1>
+                <h3>Visit my github for more Projects.</h3>
+                <div class="detail">
+                    <h3>Crypto Bot.</h3>
+                    <p>
+                        Project of an automated cryptocurrency exchange consumer bot.
+                    </p>
+                    <P>
+                        With training and a series of stimuli received, this tool is capable of operating automatically
+                        24 hours a day throughout your business strategy, with an interactive and observable market
+                        interface.
+                    </P>
+                    <div class="smallimg-container">
+                        <div>
+                            <img src="./ICONS/bot.jfif" alt="" class="smallimg-container">
+                        </div>
+                    </div>
+
+                   <!--<div class="detail">
+                        <h3>Program Comparer.</h3>
+                        <p>
+                            Design of a program checker.
+                        </p>
+                        <P>
+                            This software goes through two lists (columns) in Excel and compares all the sentences. For
+                            jobs where you need to check many values, this program instantly returns the incorrect
+                            values and the differences in each column.
+                        </P>
+                        <div class="smallimg-container">
+                            <div>
+                                <img src="./ICONS/conf.png" alt="" class="smallimg-container">
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <script>
+        const darkbtn = document.getElementById('darkbtn');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkbtn.checked = true;
+        }
+
+        darkbtn.addEventListener('change', () => {
+            if (darkbtn.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
